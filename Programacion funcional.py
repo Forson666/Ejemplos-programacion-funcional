@@ -39,4 +39,14 @@ def contarPares(lista):
 def cuadrados(lista):
     return [x*x for x in lista]
 
-print(cuadrados([x for x in range (1,11)]))
+def divisible(x,y):
+  return x % y == 0
+
+def divisibles(x):
+  return [n for n in range(1, x + 1) if divisible(x,n)]
+
+def esPrimo(x):
+  return len(divisibles(x)) <= 2
+
+def primos(x):
+  return [n for n in range(1, x) if esPrimo(n)]
